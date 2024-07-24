@@ -40,9 +40,7 @@ all variables are numerical, so we use num~num helper file
 
 ## Model 1 SIM~ARMS
 
-### Descriptive Results
-
-### Scatterplot
+### Descriptive Results - Scatterplot
 
 ```{r}
 plot(SIMS~ARM,data=data)

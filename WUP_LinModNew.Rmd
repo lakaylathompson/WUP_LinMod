@@ -48,7 +48,6 @@ plot(SIMS~ARM,data=data)
 
 This scatter plot shows that SIMS are higher when ARM strength increases. 
 
-
 ### Numerical results
 
 ```{r}
@@ -124,14 +123,14 @@ newdata = data.frame(ARM =88, GRIP=94)
 predict(model.2, newdata, interval='pred')
 ```
 
-The SIMS prediction for ARM=88 is 0.54, the predicting interval is (-3.10, 2.03)
+The SIMS prediction for GRIP=94 is 0.54, the predicting interval is (-3.10, 2.03)
 
 ## Model 3 SIM~ARM+GRIP
 
 ### Descriptive Results - Scatterplot
 
 ```{r}
-plot(SIMS~GRIP,data=data)
+plot(SIMS~ARM+GRIP, data=data)
 ```
 
 ### Numerical results
@@ -154,8 +153,28 @@ This shows the correlation between the SIMS score and the variables ARM and GRIP
   
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 = lm(SIMS ~ ARM + GRIP, data=data) 
+summary.lm(model.3)
+```
+
+The p-value from the F-statistics is 0.0000000000000002, this means the data fits the model.  
+Intercept p-value is 0.0000000000000002  
+Arm p-value is 0.00000001  
+Grip p-value is 0.00004  
+Looking at this information they are all smaller than 0.05
+
 #### predict model.3 at target point
-  
+
+```{r}
+newdata = data.frame(GRIP=94, ARM=88)
+predSIMS = predict(model.3, newdata, interval='pred')
+print(predSIMS)
+```
+
+The predicted SIMS score for GRIP=94, ARM=88 is 0.150
+
+The interval prediction are (-2.13, 2.43)
 
 ## Comparing nested models ANOVA Test
 

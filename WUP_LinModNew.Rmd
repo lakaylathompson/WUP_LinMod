@@ -179,7 +179,24 @@ The interval prediction are (-2.13, 2.43)
 ## Comparing nested models ANOVA Test
 
 ### Model.1 vs Model.3
+
+```{r}
+anova(model.1, model.3)
+summary.lm(model.1)
+model.1=lm(SIMS~ ARM, data=data)
+
+```
+
+The anova shows that there is a difference on the models since the p-value is 0.000004. 
+
+The RSS in model 2 is 188 which is smaller than model 1 which is 217. 
+
+This means that SIMS~ARM+GRIP is the better model because model 1 is SIMS ~ ARM only. 
+
+
 ### Model.2 vs Model.3
+
+
 
 ## Informally compare Model.1 with model.2
 

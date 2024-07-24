@@ -98,15 +98,36 @@ This scatter plot shows that a higher GRIP strength also makes the simulation in
 cor(SIMS~GRIP,data=data)
 ```
 
-This shows that when Grip strength increases the simulation will be at a positive.
+This shows that when GRIP strength increases the simulation will be positive.
 
 ### Inferential  (Build model.2)
-  
+
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
+
+#### scatterplot with model fit
+
+```{r}
+plot(SIMS~GRIP,data=data)
+abline(model.2, col='red')
+```
+
+
+This p-value for the interceptor and slope are 0.00000000000000022  
 
 #### predict model.2 at target point
 
+```{r}
+newdata = data.frame(ARM =88, GRIP=94)
+predict(model.2, newdata, interval='pred')
+```
+
+The SIMS prediction for ARM=88 is 0.54, the predicting interval is (-3.10, 2.03)
+
 #### now add the model fit to our plot for model.2
-  
+
 
 
 ## Model 3 SIM~ARM+GRIP

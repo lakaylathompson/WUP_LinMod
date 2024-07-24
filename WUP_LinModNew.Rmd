@@ -196,7 +196,19 @@ This means that SIMS~ARM+GRIP is the better model because model 1 is SIMS ~ ARM 
 
 ### Model.2 vs Model.3
 
+```{r}
+model.2=lm(SIMS ~ GRIP, data=data)
+anova(model.2, model.3)
+summary.lm(model.1)
+```
 
+The anova shows that the Model SIM~ARM+GRIP is better than the Model SIMS~GRIP because the RSS is lower (188) and the p-value is 0.000000014
 
 ## Informally compare Model.1 with model.2
 
+```{r}
+summary.lm(model.1)
+summary.lm(model.2)
+```
+
+Model.1 SIMS~ARM is better than model.2 SIMS~GRIP because the residual for model.1 was lower than model.2

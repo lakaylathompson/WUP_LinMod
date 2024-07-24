@@ -37,9 +37,19 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 all variables are numerical, so we use num~num helper file
 
+
 ## Model 1 SIM~ARMS
 
-### scatterplot
+### Descriptive Results
+
+### Scatterplot
+
+```{r}
+plot(SIMS~ARM,data=data)
+```
+
+This scatter plot shows that SIMS are higher when ARM strength increases. 
+
 
 ### Numerical results
 

@@ -73,9 +73,14 @@ abline(model.1, col='red')
 
 The p-value for the intercept and slope is 0.00000000000000022, so we reject the null hypothesis because it is less than 0.05
 
-
 #### Predict at target point
 
+```{r}
+newdata = data.frame(ARM =88, GRIP=94)
+predict(model.1, newdata, interval='pred')
+```
+
+The SIMS prediction for ARM=88 is 0.7, the predicting interval is (-1.73, 3.14)
 
 #### scatterplot with model fit
   

@@ -128,8 +128,28 @@ The SIMS prediction for ARM=88 is 0.54, the predicting interval is (-3.10, 2.03)
 
 ## Model 3 SIM~ARM+GRIP
 
-### Numerical results (cor)
+### Descriptive Results - Scatterplot
 
+```{r}
+plot(SIMS~GRIP,data=data)
+```
+
+### Numerical results
+
+```{r}
+df= data.frame(SIMS=data$SIMS,Grip=data$GRIP, ARM=data$ARM)
+cor(df)
+```
+
+The correlation matrix shows that SIMS correlates with GRIP and ARM: And GRIP correlates with SIMS
+
+### Numerical  reults (cor)
+
+```{r}
+cor(SIMS~ARM+GRIP, data=data)
+```
+
+This shows the correlation between the SIMS score and the variables ARM and GRIP.
 `
   
 ### Inferential  (Build 2-dimentional model.3)

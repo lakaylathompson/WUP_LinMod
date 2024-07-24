@@ -53,6 +53,11 @@ This scatter plot shows that SIMS are higher when ARM strength increases.
 
 ### Numerical results
 
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+The correlation shows that 0.6860 is positive, this means that higher strength would make the SIMS higher. However, if the correlation were to be negative it would most likely decrease. 
 
 ### Inferential  (Build model.1)
 

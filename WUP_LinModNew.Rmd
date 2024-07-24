@@ -71,6 +71,8 @@ plot(SIMS~ARM,data=data)
 abline(model.1, col='red')
 ```
 
+The p-value for the intercept and slope is 0.00000000000000022, so we reject the null hypothesis because it is less than 0.05
+
 
 #### Predict at target point
 

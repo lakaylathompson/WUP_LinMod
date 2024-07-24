@@ -126,10 +126,6 @@ predict(model.2, newdata, interval='pred')
 
 The SIMS prediction for ARM=88 is 0.54, the predicting interval is (-3.10, 2.03)
 
-#### now add the model fit to our plot for model.2
-
-
-
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)

@@ -61,6 +61,17 @@ The correlation shows that 0.6860 is positive, this means that higher strength w
 
 ### Inferential  (Build model.1)
 
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
+```{r}
+plot(SIMS~ARM,data=data)
+abline(model.1, col='red')
+```
+
+
 #### Predict at target point
 
 

@@ -94,6 +94,11 @@ This scatter plot shows that a higher GRIP strength also makes the simulation in
 
 ### Numerical results 
 
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+
+This shows that when Grip strength increases the simulation will be at a positive.
 
 ### Inferential  (Build model.2)
   
